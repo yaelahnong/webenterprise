@@ -19,6 +19,7 @@ class Produk extends Model
       'madein',
       'toko',
       'harga',
+      'image',
       'created_at',
       'updated_at',
     ];

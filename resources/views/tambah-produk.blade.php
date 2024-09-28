@@ -4,7 +4,7 @@
     <a href="/" style="background-color: lightgrey;padding:15px 20px;text-decoration:none;color:black;">Kembali</a>
     <h1>Halaman Tambah Produk</h1>
 
-    <form method="POST" action="/tambah-produk">
+    <form method="POST" action="/tambah-produk" enctype="multipart/form-data">
       @csrf
       <label for="nama" style="display:block;">Nama Produk</label>
       <input type="text" name="nama" id="nama">
@@ -27,7 +27,10 @@
       <label for="harga" style="display:block;">Harga Produk</label>
       <input type="text" name="harga" id="harga">
 
-      <button type="submit">Simpan</button>
+      <label for="image" style="display:block;">Gambar Produk</label>
+      <input type="file" name="image" id="image">
+
+      <button type="submit">Tambah Produk</button>
     </form>
   </body>
 </html>

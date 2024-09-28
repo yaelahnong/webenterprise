@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('madein');
             $table->string('toko');
             $table->integer('harga');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@
     <div style="display:flex;">
       @foreach($produk as $row)
       <div style="border: 1px solid #000;margin:10px;">
+        <img src="{{ asset('storage/' . $row->image) }}" alt="{{ $row->nama }}" style="width:100px;height:auto;">
         <p>Nama produk: {{ $row->nama }}</p>
         <p>Warna: {{ $row->warna }}</p>
         <p>Spesifikasi: {{ $row->spesifikasi }} </p>
@@ -16,7 +17,6 @@
         <p>Harga produk: {{ $row->harga }} </p>
       </div>
       @endforeach
-
     </div>
   </body>
 </html>

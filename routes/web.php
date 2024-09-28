@@ -13,6 +13,12 @@ Route::get('/tambah-produk', function () {
 });
 
 Route::post('/tambah-produk', function (Request $request) {
+      if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('images', 'public');
+    } else {
+        return back()->withErrors(['image' => 'Image upload failed.']);
+    }
+
     Produk::create([
       'nama' => $request->nama,
       'warna' => $request->warna,
@@ -20,10 +26,11 @@ Route::post('/tambah-produk', function (Request $request) {
       'tahun' => $request->tahun,
       'madein' => $request->madein,
       'toko' => $request->toko,
+      'image' => $imagePath,
       'harga' => $request->harga,
     ]);
-    
-    return redirect('/tambah-produk');
+
+    return redirect('/list-produk')->with('success', 'Produk berhasil ditambahkan!');
 });
 
 Route::get('/list-produk', function () {
