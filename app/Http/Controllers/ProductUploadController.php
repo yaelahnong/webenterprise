@@ -34,7 +34,8 @@ class ProductUploadController extends Controller
             'description' => $request->input('description'),
         ]);
 
-        return redirect()->route('image.list')->with('success', 'Image uploaded successfully.');
+        // Redirect to the welcome page with a success message
+        return redirect('/')->with('success', 'Image uploaded successfully!');
     }
 
     // List uploaded images

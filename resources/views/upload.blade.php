@@ -10,7 +10,7 @@
 
 <body>
     <div class="container mt-5">
-        <h2>Upload Image</h2>
+        <h2>Upload Product</h2>
 
         <!-- Display validation errors -->
         @if ($errors->any())
@@ -29,12 +29,12 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Enter image title">
+                <input type="text" class="form-control" name="title" id="title" placeholder="Enter prodcut title">
             </div>
 
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" name="description" id="description" rows="3" placeholder="Enter image description"></textarea>
+                <textarea class="form-control" name="description" id="description" rows="3" placeholder="Enter product description"></textarea>
             </div>
 
             <div class="mb-3">
